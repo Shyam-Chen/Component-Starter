@@ -5,10 +5,11 @@ import { getBabelOutputPlugin } from '@rollup/plugin-babel';
 import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import { terser } from 'rollup-plugin-terser';
+import copy from 'rollup-plugin-copy';
 
 const production = !process.env.ROLLUP_WATCH;
 
-const cpnConfig = (file) => ({
+const cpnConfig = (file, mod) => ({
   input: path.join(__dirname, 'src', file),
   output: {
     file: path.join(__dirname, 'dist', file.substring(file.lastIndexOf('.'), 0) + '.js'),
@@ -31,6 +32,19 @@ const cpnConfig = (file) => ({
     }),
     commonjs(),
     production && terser(),
+    production &&
+      copy({
+        targets: [
+          {
+            src: path.join(__dirname, `./src/${mod}/package.json`),
+            dest: path.join(__dirname, `./dist/${mod}`),
+          },
+          {
+            src: path.join(__dirname, `./src/${mod}/index.js`),
+            dest: path.join(__dirname, `./dist/${mod}`),
+          },
+        ],
+      }),
   ],
   watch: {
     clearScreen: false,
@@ -38,6 +52,6 @@ const cpnConfig = (file) => ({
 });
 
 export default [
-  { ...cpnConfig('./soft-shape/SoftShape.svelte') },
+  { ...cpnConfig('./soft-shape/SoftShape.svelte', 'soft-shape') },
   // { ...cpnConfig('<INPUT_CPN>') },
 ];

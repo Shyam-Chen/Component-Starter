@@ -1,27 +1,30 @@
-// TODO: import SoftShape from '~/soft-shape/SoftShape';
-import SoftShape from './SoftShape.svelte';
+import '../../dist/soft-shape';
 
 export default {
-  title: 'SoftShape',
-  component: SoftShape,
+  title: 'Soft Shape',
   argTypes: {
-    flat: { control: 'boolean', defaultValue: { summary: true } },
-    concave: { control: 'boolean' },
-    convex: { control: 'boolean' },
-    pressed: { control: 'boolean' },
+    slot: { control: 'text' },
   },
 };
 
-const Template = ({ ...args }) => ({
-  Component: SoftShape,
-  props: args,
-});
+const Template = ({ pressed, slot }) => {
+  return `
+    <soft-shape
+      ${pressed ? 'pressed="true"' : ''}
+    >
+      ${slot}
+    </soft-shape>
+  `;
+};
 
-export const Default = Template.bind({});
-Default.args = {};
+export const Text = Template.bind({});
+Text.args = {
+  pressed: false,
+  slot: 'A',
+};
 
-export const Flat = Template.bind({});
-Flat.args = { flat: true };
-
-export const Concave = Template.bind({});
-Concave.args = { pressed: true };
+export const Text2 = Template.bind({});
+Text2.args = {
+  pressed: true,
+  slot: 'B',
+};
