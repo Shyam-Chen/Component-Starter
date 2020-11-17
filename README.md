@@ -1,13 +1,16 @@
 # Component Starter
 
+```sh
+$ yarn install
+$ yarn build
+$ yarn storybook
+```
+
 ## Git
 
 ```sh
 $ git clone https://github.com/Shyam-Chen/Component-Starter app-components
 $ cd app-components
-
-$ yarn install
-$ yarn build
 ```
 
 ```ts
