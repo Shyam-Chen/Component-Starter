@@ -1,8 +1,13 @@
 # Component Starter
 
+:carousel_horse: A boilerplate for Web Components to help build microservices.
+
+## Usage
+
 ```sh
 $ yarn install
-$ yarn build
+
+$ yarn serve
 $ yarn storybook
 ```
 
@@ -38,4 +43,6 @@ import 'soft-shape';
 
 ## Npm
 
-private packages
+```sh
+$ lerna publish
+```

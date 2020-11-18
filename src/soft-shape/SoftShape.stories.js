@@ -11,7 +11,7 @@ export default {
   },
   args: {
     flat: true,
-    slot: /*html*/ `<div style="color: pink">Pink</div>`,
+    slot: /*html*/ ``,
   },
 };
 

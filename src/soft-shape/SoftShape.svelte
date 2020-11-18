@@ -20,6 +20,9 @@
     width: 300px;
     height: 300px;
     border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .soft-shape--flat {
