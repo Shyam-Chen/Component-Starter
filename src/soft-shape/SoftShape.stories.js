@@ -13,6 +13,11 @@ export default {
     flat: true,
     slot: /*html*/ ``,
   },
+  parameters: {
+    actions: {
+      handles: ['shape soft-shape'],
+    },
+  },
 };
 
 const Template = (args) => {
@@ -29,3 +34,15 @@ const Template = (args) => {
 };
 
 export const Default = Template.bind({});
+
+export const Flat = Template.bind({});
+Flat.args = { flat: true };
+
+export const Concave = Template.bind({});
+Concave.args = { concave: true };
+
+export const Convex = Template.bind({});
+Convex.args = { convex: true };
+
+export const Pressed = Template.bind({});
+Pressed.args = { pressed: true };

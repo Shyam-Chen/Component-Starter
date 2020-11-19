@@ -1,8 +1,30 @@
 <script>
+  import { createEventDispatcher } from 'svelte';
+  import { get_current_component } from 'svelte/internal';
+
   export let flat = true;
   export let concave = false;
   export let convex = false;
   export let pressed = false;
+
+  const component = get_current_component();
+  const svelteDispatch = createEventDispatcher();
+
+  const dispatch = (name, detail) => {
+    svelteDispatch(name, detail);
+    component?.dispatchEvent(new CustomEvent(name, { detail }));
+  };
+
+  function onShape() {
+    let shape = null;
+
+    if (flat) shape = 'flat';
+    if (concave) shape = 'concave';
+    if (convex) shape = 'convex';
+    if (pressed) shape = 'pressed';
+
+    dispatch('shape', { shape });
+  }
 </script>
 
 <div
@@ -11,6 +33,7 @@
   class:soft-shape--concave="{concave}"
   class:soft-shape--convex="{convex}"
   class:soft-shape--pressed="{pressed}"
+  on:click="{onShape}"
 >
   <slot></slot>
 </div>
