@@ -5,17 +5,21 @@
 ## Usage
 
 ```sh
-$ yarn install
+$ git clone https://github.com/Shyam-Chen/Component-Starter app-components
+$ cd app-components
 
+$ yarn install
 $ yarn serve
-$ yarn storybook
 ```
 
-## Git
+## Install in projects
 
 ```sh
 $ git clone https://github.com/Shyam-Chen/Component-Starter app-components
 $ cd app-components
+
+$ yarn install
+$ yarn build
 ```
 
 ```ts
@@ -27,22 +31,16 @@ $ cd app-components
 ```js
 {
   "name": "<PROJECT_NAME>",
-  "scripts": {
-    "postinstall": "cpx \"../app-components/dist/**/*\" ./node_modules"
+  "dependencies": {
+    "app-components": "file:../app-components"
   }
 }
 ```
 
 ```js
-import 'soft-shape';
+import 'app-components/soft-shape';
 ```
 
 ```html
 <soft-shape></soft-shape>
-```
-
-## Npm
-
-```sh
-$ lerna publish
 ```
