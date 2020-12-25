@@ -2,7 +2,7 @@
 
 :carousel_horse: A boilerplate for Web Components to help build microservices.
 
-## Usage
+## Create Web Components
 
 ```sh
 $ git clone https://github.com/Shyam-Chen/Component-Starter app-components
@@ -12,7 +12,7 @@ $ yarn install
 $ yarn serve
 ```
 
-## Install in projects
+## Install in Projects
 
 ```sh
 $ git clone https://github.com/Shyam-Chen/Component-Starter app-components
@@ -35,6 +35,13 @@ $ yarn build
     "app-components": "file:../app-components"
   }
 }
+```
+
+```sh
+$ pwd
+# path/to/<PROJECT_NAME>
+
+$ yarn install
 ```
 
 ```js
