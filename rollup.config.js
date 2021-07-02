@@ -31,20 +31,19 @@ const cpnConfig = (file, mod) => ({
       dedupe: ['svelte'],
     }),
     commonjs(),
+    copy({
+      targets: [
+        {
+          src: path.join(__dirname, `./src/${mod}/package.json`),
+          dest: path.join(__dirname, `./dist/${mod}`),
+        },
+        {
+          src: path.join(__dirname, `./src/${mod}/index.js`),
+          dest: path.join(__dirname, `./dist/${mod}`),
+        },
+      ],
+    }),
     production && terser(),
-    production &&
-      copy({
-        targets: [
-          {
-            src: path.join(__dirname, `./src/${mod}/package.json`),
-            dest: path.join(__dirname, `./dist/${mod}`),
-          },
-          {
-            src: path.join(__dirname, `./src/${mod}/index.js`),
-            dest: path.join(__dirname, `./dist/${mod}`),
-          },
-        ],
-      }),
   ],
   watch: {
     clearScreen: false,
