@@ -5,26 +5,16 @@
 ## Create Web Components
 
 ```sh
-$ git clone https://github.com/Shyam-Chen/Component-Starter app-components
-$ cd app-components
-
-$ yarn install
-$ yarn serve
+$ git clone --depth=1 https://github.com/Shyam-Chen/Component-Starter awesome-components
+$ cd awesome-components
+$ pnpm install
 ```
 
 ## Install in Projects
 
-```sh
-$ git clone https://github.com/Shyam-Chen/Component-Starter app-components
-$ cd app-components
-
-$ yarn install
-$ yarn build
-```
-
 ```ts
 .
-├── app-components
+├── awesome-components
 └── <PROJECT_NAME>
 ```
 
@@ -32,22 +22,15 @@ $ yarn build
 {
   "name": "<PROJECT_NAME>",
   "dependencies": {
-    "app-components": "file:../app-components"
+    "awesome-components": "../awesome-components"
   }
 }
 ```
 
-```sh
-$ pwd
-# path/to/<PROJECT_NAME>
+## Examples
 
-$ yarn install
-```
-
-```js
-import 'app-components/soft-shape';
-```
-
-```html
-<soft-shape></soft-shape>
-```
+- [Vue](./examples/vue)
+- [Svelte](./examples/svelte)
+- [Preact](./examples/preact)
+- ~~React~~ (Not friendly to Web Components)
+- ~~Angular~~ (Too much own build specific configuration)

@@ -1,9 +1,0 @@
-{
-  "name": "soft-shape",
-  "version": "1.0.0",
-  "main": "index.js",
-  "license": "MIT",
-  "dependencies": {
-    "@babel/runtime": "^7.12.5"
-  }
-}
