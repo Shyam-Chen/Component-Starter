@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { SimpleGreeting } from '../../../dist/awesome-components';
+import { SimpleGreeting } from 'awesome-components';
 </script>
 
 <template>

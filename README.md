@@ -22,7 +22,7 @@ $ pnpm install
 {
   "name": "<PROJECT_NAME>",
   "dependencies": {
-    "awesome-components": "../awesome-components"
+    "awesome-components": "link:../awesome-components"
   }
 }
 ```
@@ -32,5 +32,4 @@ $ pnpm install
 - [Vue](./examples/vue)
 - [Svelte](./examples/svelte)
 - [Preact](./examples/preact)
-- ~~React~~ (Not friendly to Web Components)
-- ~~Angular~~ (Too much own build specific configuration)
+- [React](./examples/react)

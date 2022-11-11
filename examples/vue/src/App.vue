@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import { ref } from 'vue';
-import { SimpleGreeting, MyElement, MyButton } from '../../../dist/awesome-components';
+import { SimpleGreeting, MyElement, MyButton } from 'awesome-components';
 
 import Foo from './Foo.vue';
 
