@@ -1,13 +1,8 @@
 import React from 'react';
-import { createComponent } from '@lit-labs/react';
-import { SimpleGreeting } from '../../../dist/awesome-components';
+import { SimpleGreeting } from 'awesome-components';
 
-const SimpleGreetingComponent = createComponent({
-  tagName: 'simple-greeting',
-  elementClass: SimpleGreeting,
-  react: React,
-});
+SimpleGreeting;
 
 export function Foo() {
-  return <SimpleGreetingComponent />;
+  return <simple-greeting></simple-greeting>;
 }

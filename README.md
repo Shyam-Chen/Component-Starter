@@ -31,5 +31,5 @@ $ pnpm install
 
 - [Vue](./examples/vue)
 - [Svelte](./examples/svelte)
-- [React](./examples/preact)
+- [React](./examples/react)
 - [Angular](./examples/angular)
