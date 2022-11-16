@@ -3,9 +3,9 @@
 
   import Foo from './Foo.svelte';
 
-  let myLabel: string = '';
+  let myLabel = '';
 
-  const myClick = (event) => {
+  const myClick = (event: CustomEvent) => {
     console.log(event);
     myLabel = event.detail.label;
   };

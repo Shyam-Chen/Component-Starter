@@ -6,7 +6,7 @@ import Foo from './Foo.vue';
 
 const myLabel = ref('');
 
-const myClick = (event) => {
+const myClick = (event: CustomEvent) => {
   console.log(event);
   myLabel.value = event.detail.label;
 };

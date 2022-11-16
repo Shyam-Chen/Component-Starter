@@ -11,7 +11,7 @@
       "~/*": ["src/*"]
     },
     "resolveJsonModule": true,
-    "types": ["vite/client", "vitest"],
+    "types": ["svelte", "vite/client", "vitest"],
 
     "allowJs": true,
 

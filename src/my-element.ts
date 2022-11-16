@@ -29,8 +29,8 @@ export class MyElement extends LitElement {
   // and child nodes/text.
   render() {
     return html`
-      <span @click=${this.togglePlanet}
-        >${this.greeting}
+      <span @click=${this.togglePlanet}>
+        ${this.greeting}
         <span class="planet">${this.planet}</span>
       </span>
     `;
