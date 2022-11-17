@@ -33,3 +33,16 @@ $ pnpm install
 - [Svelte](./examples/svelte)
 - [React](./examples/react)
 - [Angular](./examples/angular)
+
+```sh
+$ pnpm install
+$ pnpm build
+
+$ cd examples/vue
+$ cd examples/svelte
+$ cd examples/react
+$ cd examples/angular
+
+$ pnpm install
+$ pnpm dev
+```
