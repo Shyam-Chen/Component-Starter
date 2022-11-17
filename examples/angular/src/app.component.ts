@@ -1,8 +1,7 @@
 import { Component } from '@angular/core';
-import { SimpleGreeting, MyButton } from 'awesome-components';
+import { register, SimpleGreeting, MyButton } from 'awesome-components';
 
-SimpleGreeting;
-MyButton;
+register(SimpleGreeting, MyButton);
 
 @Component({
   standalone: true,

@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { SimpleGreeting, MyButton } from '../../../dist/awesome-components';
+  import { SimpleGreeting, MyButton } from 'awesome-components';
 
   import Foo from './Foo.svelte';
 
@@ -14,5 +14,5 @@
 <simple-greeting name="World"></simple-greeting>
 <Foo />
 
-<my-button on:myClick={myClick}>My Click</my-button>
+<my-button my-label="My Button (Svelte)" on:my-click={myClick}></my-button>
 {myLabel}

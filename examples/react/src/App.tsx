@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
-import { SimpleGreeting, MyButton } from 'awesome-components';
+import { register, SimpleGreeting, MyButton } from 'awesome-components';
 
 import { Foo } from './Foo';
 
-SimpleGreeting;
-MyButton;
+register(SimpleGreeting, MyButton);
 
 export function App() {
   const [myLabel, setMyLabel] = useState('');
@@ -19,7 +18,7 @@ export function App() {
       <simple-greeting name="World"></simple-greeting>
       <Foo />
 
-      <my-button onmyClick={myClick}></my-button>
+      <my-button my-label="My Button (React)" onMyClick={myClick}></my-button>
       {myLabel}
     </>
   );

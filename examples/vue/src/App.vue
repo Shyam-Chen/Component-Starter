@@ -17,6 +17,6 @@ const myClick = (event: CustomEvent) => {
   <simple-greeting name="World"></simple-greeting>
   <my-element></my-element>
 
-  <my-button @myClick="myClick">My Click</my-button>
+  <my-button my-label="My Button (Vue)" @my-click="myClick"></my-button>
   {{ myLabel }}
 </template>

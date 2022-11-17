@@ -18,24 +18,16 @@ export class MyButton extends LitElement {
     }
   `;
 
-  @property({ type: String }) label: string = 'Hello LitElement';
+  @property({ type: String }) 'my-label': string = '';
 
-  constructor() {
-    super();
+  handleClick() {
+    const detail = { label: this['my-label'], date: new Date().toISOString() };
+
+    this.dispatchEvent(new CustomEvent<MyButtonEvent>('my-click', { detail }));
+    this.dispatchEvent(new CustomEvent<MyButtonEvent>('MyClick', { detail }));
   }
 
   render() {
-    return html`<span @click=${this.handleClick}> ${this.label} </span>`;
-  }
-
-  private handleClick(e: MouseEvent) {
-    // this.dispatchEvent(new Event("myClick"));
-    const event = new CustomEvent<MyButtonEvent>('myClick', {
-      detail: {
-        label: this.label,
-        date: new Date().toISOString(),
-      },
-    });
-    this.dispatchEvent(event);
+    return html`<span @click=${this.handleClick}> ${this['my-label']} </span>`;
   }
 }
