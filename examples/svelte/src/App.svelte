@@ -1,7 +1,9 @@
 <script lang="ts">
-  import { SimpleGreeting, MyButton } from 'awesome-components';
+  import { register, SimpleGreeting, MyButton } from 'awesome-components';
 
   import Foo from './Foo.svelte';
+
+  register(SimpleGreeting, MyButton);
 
   let myLabel = '';
 

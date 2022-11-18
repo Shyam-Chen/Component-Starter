@@ -1,5 +1,7 @@
 <script lang="ts">
-  import { SimpleGreeting } from 'awesome-components';
+  import { register, SimpleGreeting } from 'awesome-components';
+
+  register(SimpleGreeting);
 </script>
 
 <simple-greeting></simple-greeting>
