@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { register, SimpleGreeting, MyButton } from 'awesome-components';
+import { register, WcSwitch } from 'awesome-components';
 
-register(SimpleGreeting, MyButton);
+register(WcSwitch);
 
 @Component({
   standalone: true,
@@ -10,10 +10,9 @@ register(SimpleGreeting, MyButton);
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  myLabel = '';
+  checked = false;
 
-  myClick(event: CustomEvent) {
-    console.log(event);
-    this.myLabel = event.detail.label;
+  changeWcSwitch(event: CustomEvent) {
+    this.checked = !event.detail.checked;
   }
 }

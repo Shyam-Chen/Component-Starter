@@ -1,25 +1,20 @@
 import React, { useState } from 'react';
-import { register, SimpleGreeting, MyButton } from 'awesome-components';
+import { register, WcSwitch } from 'awesome-components';
 
-import { Foo } from './Foo';
-
-register(SimpleGreeting, MyButton);
+register(WcSwitch);
 
 export function App() {
-  const [myLabel, setMyLabel] = useState('');
+  const [checked, setChecked] = useState(false);
 
-  const myClick = (event: CustomEvent) => {
-    console.log(event);
-    setMyLabel(event.detail.label);
+  const changeWcSwitch = (event: CustomEvent) => {
+    setChecked(!event.detail.checked);
   };
 
   return (
     <>
-      <simple-greeting name="World"></simple-greeting>
-      <Foo />
-
-      <my-button my-label="My Button (React)" onMyClick={myClick}></my-button>
-      {myLabel}
+      <wc-switch checked={checked} onChange={changeWcSwitch}>
+        Switch in React
+      </wc-switch>
     </>
   );
 }

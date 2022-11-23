@@ -11,7 +11,7 @@
       "~/*": ["src/*"]
     },
     "resolveJsonModule": true,
-    "types": ["vite/client", "vitest"],
+    "types": ["svelte", "vite/client", "vitest"],
 
     "allowJs": true,
 
@@ -23,7 +23,9 @@
     "lib": ["ESNext", "DOM"],
     "target": "esnext",
 
-    "skipLibCheck": true
+    "skipLibCheck": true,
+
+    "declaration": true
   },
   "exclude": ["node_modules", "dist", "examples"]
 }

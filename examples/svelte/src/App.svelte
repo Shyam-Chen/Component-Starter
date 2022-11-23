@@ -1,20 +1,13 @@
 <script lang="ts">
-  import { register, SimpleGreeting, MyButton } from 'awesome-components';
+  import { register, WcSwitch } from 'awesome-components';
 
-  import Foo from './Foo.svelte';
+  register(WcSwitch);
 
-  register(SimpleGreeting, MyButton);
+  let checked = false;
 
-  let myLabel = '';
-
-  const myClick = (event: CustomEvent) => {
-    console.log(event);
-    myLabel = event.detail.label;
+  const changeWcSwitch = (event: CustomEvent) => {
+    checked = !event.detail.checked;
   };
 </script>
 
-<simple-greeting name="World"></simple-greeting>
-<Foo />
-
-<my-button my-label="My Button (Svelte)" on:my-click={myClick}></my-button>
-{myLabel}
+<wc-switch {checked} on:change={changeWcSwitch}>Switch in Svelte</wc-switch>

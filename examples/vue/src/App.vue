@@ -1,22 +1,15 @@
 <script lang="ts" setup>
-import { ref } from 'vue';
-import { SimpleGreeting, MyElement, MyButton } from 'awesome-components';
+import { reactive } from 'vue';
+import { WcSwitch } from 'awesome-components';
 
-import Foo from './Foo.vue';
-
-const myLabel = ref('');
-
-const myClick = (event: CustomEvent) => {
-  console.log(event);
-  myLabel.value = event.detail.label;
-};
+const flux = reactive({
+  wcSwitch: true,
+  changeWcSwitch(event: CustomEvent) {
+    flux.wcSwitch = !event.detail.checked;
+  },
+});
 </script>
 
 <template>
-  <Foo />
-  <simple-greeting name="World"></simple-greeting>
-  <my-element></my-element>
-
-  <my-button my-label="My Button (Vue)" @my-click="myClick"></my-button>
-  {{ myLabel }}
+  <wc-switch :checked="flux.wcSwitch" @change="flux.changeWcSwitch">Switch in Vue</wc-switch>
 </template>
