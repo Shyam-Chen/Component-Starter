@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { register, WcSwitch } from 'awesome-components';
+import { register, WcHello, WcSwitch } from 'awesome-components';
 
-register(WcSwitch);
+register(WcHello, WcSwitch);
 
 @Component({
   standalone: true,
@@ -10,7 +10,12 @@ register(WcSwitch);
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
+  text = '';
   checked = false;
+
+  helloClick(event: CustomEvent) {
+    this.text = event.detail.helloText;
+  }
 
   changeWcSwitch(event: CustomEvent) {
     this.checked = !event.detail.checked;

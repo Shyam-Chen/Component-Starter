@@ -1,1 +1,11 @@
-<wc-switch [checked]="checked" (change)="changeWcSwitch($event)">Switch in Angular</wc-switch>
+<wc-hello hello-text="Hello Angular" (hello-click)="helloClick($event)">
+  ({{ text }})
+</wc-hello>
+
+<wc-hello [helloText]="'Hello Angular'" (helloClick)="helloClick($event)">
+  ({{ text }})
+</wc-hello>
+
+<wc-switch [checked]="checked" (change)="changeWcSwitch($event)">
+  Switch in Angular ({{ checked }})
+</wc-switch>

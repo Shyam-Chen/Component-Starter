@@ -1,7 +1,13 @@
 <script lang="ts">
-  import { register, WcSwitch } from 'awesome-components';
+  import { register, WcHello, WcSwitch } from 'awesome-components';
 
-  register(WcSwitch);
+  register(WcHello, WcSwitch);
+
+  let text = '';
+
+  const helloClick = (event: CustomEvent) => {
+    text = event.detail.helloText;
+  };
 
   let checked = false;
 
@@ -10,4 +16,10 @@
   };
 </script>
 
-<wc-switch {checked} on:change={changeWcSwitch}>Switch in Svelte</wc-switch>
+<wc-hello hello-text="Hello Svelte" on:hello-click={helloClick}>
+  ({text})
+</wc-hello>
+
+<wc-switch {checked} on:change={changeWcSwitch}>
+  Switch in Svelte ({checked})
+</wc-switch>
