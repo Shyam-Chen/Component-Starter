@@ -6,6 +6,8 @@ specifiers:
   '@angular/core': ^14.0.0
   '@angular/platform-browser': ^14.0.0
   '@angular/platform-browser-dynamic': ^14.0.0
+  '@angular/router': ^15.0.1
+  '@material/mwc-textfield': ^0.27.0
   '@nitedani/vite-plugin-angular': ^14.3.28
   awesome-components: link:../../
   rxjs: ^7.5.6
@@ -20,6 +22,8 @@ dependencies:
   '@angular/core': 14.2.10_rxjs@7.5.7+zone.js@0.11.8
   '@angular/platform-browser': 14.2.10_vh6c3jyzt4u546xftu4wjesrei
   '@angular/platform-browser-dynamic': 14.2.10_6pwxszwfx7t6eu7geozn33s7pu
+  '@angular/router': 15.0.1_ytyipurqyq25c66wnn5yzzxlwa
+  '@material/mwc-textfield': 0.27.0
   awesome-components: link:../..
   rxjs: 7.5.7
   zone.js: 0.11.8
@@ -325,6 +329,22 @@ packages:
     dependencies:
       '@angular/common': 14.2.10_fyli66qyvqiwbjy3d5zeqqz3au
       '@angular/core': 14.2.10_rxjs@7.5.7+zone.js@0.11.8
+      tslib: 2.4.1
+    dev: false
+
+  /@angular/router/15.0.1_ytyipurqyq25c66wnn5yzzxlwa:
+    resolution: {integrity: sha512-L+GgFNAgITyyD7CTTtOjz1OgFu00+xzjANLfOMs8wGW8OsqSS68lsXF9QexbPGm+e0n+rmQjYOZcsi0Bti4sCQ==}
+    engines: {node: ^14.20.0 || ^16.13.0 || >=18.10.0}
+    peerDependencies:
+      '@angular/common': 15.0.1
+      '@angular/core': 15.0.1
+      '@angular/platform-browser': 15.0.1
+      rxjs: ^6.5.3 || ^7.4.0
+    dependencies:
+      '@angular/common': 14.2.10_fyli66qyvqiwbjy3d5zeqqz3au
+      '@angular/core': 14.2.10_rxjs@7.5.7+zone.js@0.11.8
+      '@angular/platform-browser': 14.2.10_vh6c3jyzt4u546xftu4wjesrei
+      rxjs: 7.5.7
       tslib: 2.4.1
     dev: false
 
@@ -1791,6 +1811,204 @@ packages:
     resolution: {integrity: sha512-Hcv+nVC0kZnQ3tD9GVu5xSMR4VVYOteQIr/hwFPVEvPdlXqgGEuRjiheChHgdM+JyqdgNcmzZOX/tnl0JOiI7A==}
     dev: true
 
+  /@lit/reactive-element/1.4.2:
+    resolution: {integrity: sha512-VMOxsWh/QDwrxPsgkSQnuZ+8mfNy1OTjzzUdLBvvZtpahwPTHTeVZ51RZRqO4xfKVrR+btIPA8D01IL3xeG66w==}
+    dev: false
+
+  /@material/animation/14.0.0-canary.53b3cad2f.0:
+    resolution: {integrity: sha512-GBuR4VmcTQW1D0lPXEosf5Giho72LLbyGIydWGtaEUtLJoive/D9kFkwTN4Fsyt9Kkl7hbhs35vrNe6QkAH4/Q==}
+    dependencies:
+      tslib: 2.4.1
+    dev: false
+
+  /@material/base/14.0.0-canary.53b3cad2f.0:
+    resolution: {integrity: sha512-UJKbXwZtkrA3sfQDmj8Zbw1Q3Tqtl6KdfVFws95Yf7TCUgTFzbZI/FSx1w7dVugQPOEnIBuZnzqZam/MtHkx4w==}
+    dependencies:
+      tslib: 2.4.1
+    dev: false
+
+  /@material/density/14.0.0-canary.53b3cad2f.0:
+    resolution: {integrity: sha512-Eh/vZ3vVyqtpylg5Ci33qlgtToS4H1/ppd450Ib3tcdISIoodgijYY0w4XsRvrnZgbI/h/1STFdLxdzS0UNuFw==}
+    dependencies:
+      tslib: 2.4.1
+    dev: false
+
+  /@material/dom/14.0.0-canary.53b3cad2f.0:
+    resolution: {integrity: sha512-aR+rfncF6oi2ivdOlKSJI4UXwNzWV5rXM88MLDoSJF1D7lXxhAKhge+tMUBodWGV/q0+FnXLuVAa0WYTrKjo+A==}
+    dependencies:
+      '@material/feature-targeting': 14.0.0-canary.53b3cad2f.0
+      tslib: 2.4.1
+    dev: false
+
+  /@material/elevation/14.0.0-canary.53b3cad2f.0:
+    resolution: {integrity: sha512-3h+EkR588RMZ5TSNQ4UeXD1FOBnL3ABQix0DQIGwtNJCqSMoPndT/oJEFvwQbTkZNDbFIKN9p1Q7/KuFPVY8Pw==}
+    dependencies:
+      '@material/animation': 14.0.0-canary.53b3cad2f.0
+      '@material/base': 14.0.0-canary.53b3cad2f.0
+      '@material/feature-targeting': 14.0.0-canary.53b3cad2f.0
+      '@material/rtl': 14.0.0-canary.53b3cad2f.0
+      '@material/theme': 14.0.0-canary.53b3cad2f.0
+      tslib: 2.4.1
+    dev: false
+
+  /@material/feature-targeting/14.0.0-canary.53b3cad2f.0:
+    resolution: {integrity: sha512-fn7Af3PRyARtNeYqtjxXmE3Y/dCpnpQVWWys57MqiGR/nvc6qpgOfJ6rOdcu/MrOysOE/oebTUDmDnTmwpe9Hw==}
+    dependencies:
+      tslib: 2.4.1
+    dev: false
+
+  /@material/floating-label/14.0.0-canary.53b3cad2f.0:
+    resolution: {integrity: sha512-gHZUTTVKnP+Zjz4l9IT/G89NPmypn5FlTGLWKKqXbuQphr37rsKFR3Y80SJxULRyMDnAdKSxuZwiXLFKQz9KlA==}
+    dependencies:
+      '@material/animation': 14.0.0-canary.53b3cad2f.0
+      '@material/base': 14.0.0-canary.53b3cad2f.0
+      '@material/dom': 14.0.0-canary.53b3cad2f.0
+      '@material/feature-targeting': 14.0.0-canary.53b3cad2f.0
+      '@material/rtl': 14.0.0-canary.53b3cad2f.0
+      '@material/theme': 14.0.0-canary.53b3cad2f.0
+      '@material/typography': 14.0.0-canary.53b3cad2f.0
+      tslib: 2.4.1
+    dev: false
+
+  /@material/line-ripple/14.0.0-canary.53b3cad2f.0:
+    resolution: {integrity: sha512-k8f8uuDwnSqZZ98CzbYtQVtxlp1ryUup9nd2uobo3kiqQNlQfXdGkVjuCXcla0OPiKFizNn7dS6Kl/j6L09XUA==}
+    dependencies:
+      '@material/animation': 14.0.0-canary.53b3cad2f.0
+      '@material/base': 14.0.0-canary.53b3cad2f.0
+      '@material/feature-targeting': 14.0.0-canary.53b3cad2f.0
+      '@material/theme': 14.0.0-canary.53b3cad2f.0
+      tslib: 2.4.1
+    dev: false
+
+  /@material/mwc-base/0.27.0:
+    resolution: {integrity: sha512-oCWWtjbyQ52AaUbzINLGBKScIPyqhps2Y7c8t6Gu6fcFeDxhKXMV1Cqvtj/OMhtAt53XjHfD2XruWwYv3cYYUA==}
+    dependencies:
+      '@material/base': 14.0.0-canary.53b3cad2f.0
+      '@material/dom': 14.0.0-canary.53b3cad2f.0
+      lit: 2.4.1
+      tslib: 2.4.1
+    dev: false
+
+  /@material/mwc-floating-label/0.27.0:
+    resolution: {integrity: sha512-uLleloTxQ6dDShcZzqgqfC8otQY8DtGMO9HFQbAEncoFAWpAehcEonsuT/IUhMORN+c5un0P5WXwcZsInJb7og==}
+    dependencies:
+      '@material/floating-label': 14.0.0-canary.53b3cad2f.0
+      lit: 2.4.1
+      tslib: 2.4.1
+    dev: false
+
+  /@material/mwc-line-ripple/0.27.0:
+    resolution: {integrity: sha512-n9Xpt5g3RJEl9rvk14OP6dUNJUtsJA46beTQiep7ppO7IPVFLC1v/5sPpUzfNPUBsclSPxdBuNlCxsgcIYueUw==}
+    dependencies:
+      '@material/line-ripple': 14.0.0-canary.53b3cad2f.0
+      lit: 2.4.1
+      tslib: 2.4.1
+    dev: false
+
+  /@material/mwc-notched-outline/0.27.0:
+    resolution: {integrity: sha512-IlqfQVaEd1RAHqhOG0Xk5JhTDgBe/P9og0pnACglK6bPE0vUhYKwibJiHcr4ACTPtGWHO9o92aktR+7AIEAKtQ==}
+    dependencies:
+      '@material/mwc-base': 0.27.0
+      '@material/notched-outline': 14.0.0-canary.53b3cad2f.0
+      lit: 2.4.1
+      tslib: 2.4.1
+    dev: false
+
+  /@material/mwc-textfield/0.27.0:
+    resolution: {integrity: sha512-4/OEeEVAWWQ1DzpjeMLYLsa9HMlifOPjAvi0681Yj1g/RYJs5ONZS80HZ8HOT+efAOlZDugshgM4gdNS3I0XFQ==}
+    dependencies:
+      '@material/floating-label': 14.0.0-canary.53b3cad2f.0
+      '@material/line-ripple': 14.0.0-canary.53b3cad2f.0
+      '@material/mwc-base': 0.27.0
+      '@material/mwc-floating-label': 0.27.0
+      '@material/mwc-line-ripple': 0.27.0
+      '@material/mwc-notched-outline': 0.27.0
+      '@material/textfield': 14.0.0-canary.53b3cad2f.0
+      lit: 2.4.1
+      tslib: 2.4.1
+    dev: false
+
+  /@material/notched-outline/14.0.0-canary.53b3cad2f.0:
+    resolution: {integrity: sha512-3ByiPOC/wWQmFKfgJS98kb5/6v92n7uIfJ6v6sryKJlJCJn39qfpGcCM5RpRIws1RET1s1zBJT2JDwYeu/hM5A==}
+    dependencies:
+      '@material/base': 14.0.0-canary.53b3cad2f.0
+      '@material/feature-targeting': 14.0.0-canary.53b3cad2f.0
+      '@material/floating-label': 14.0.0-canary.53b3cad2f.0
+      '@material/rtl': 14.0.0-canary.53b3cad2f.0
+      '@material/shape': 14.0.0-canary.53b3cad2f.0
+      '@material/theme': 14.0.0-canary.53b3cad2f.0
+      tslib: 2.4.1
+    dev: false
+
+  /@material/ripple/14.0.0-canary.53b3cad2f.0:
+    resolution: {integrity: sha512-6g2G62vd8DsMuIUSXlRrzb98qkZ4o8ZREknNwNP2zaLQEOkJ//4j9HaqDt98/3LIjUTY9UIVFTQENiMmlwKHYQ==}
+    dependencies:
+      '@material/animation': 14.0.0-canary.53b3cad2f.0
+      '@material/base': 14.0.0-canary.53b3cad2f.0
+      '@material/dom': 14.0.0-canary.53b3cad2f.0
+      '@material/feature-targeting': 14.0.0-canary.53b3cad2f.0
+      '@material/rtl': 14.0.0-canary.53b3cad2f.0
+      '@material/theme': 14.0.0-canary.53b3cad2f.0
+      tslib: 2.4.1
+    dev: false
+
+  /@material/rtl/14.0.0-canary.53b3cad2f.0:
+    resolution: {integrity: sha512-f08LT0HSa0WYU+4Jz/tbm1TQ9Fcf2k+H6dPPYv0J1sZmX6hMgCEmNiUdUFLQFvszoXx2XrRi1/hIFjbz2e69Yg==}
+    dependencies:
+      '@material/theme': 14.0.0-canary.53b3cad2f.0
+      tslib: 2.4.1
+    dev: false
+
+  /@material/shape/14.0.0-canary.53b3cad2f.0:
+    resolution: {integrity: sha512-RyjInLCNe+nI/ulKea0ZLHphXQDiDqYazS25SRn18g8Hoa5qGNaY5oOBncDXUYn3jm5oI5kFc9oif//kulkbjg==}
+    dependencies:
+      '@material/feature-targeting': 14.0.0-canary.53b3cad2f.0
+      '@material/rtl': 14.0.0-canary.53b3cad2f.0
+      '@material/theme': 14.0.0-canary.53b3cad2f.0
+      tslib: 2.4.1
+    dev: false
+
+  /@material/textfield/14.0.0-canary.53b3cad2f.0:
+    resolution: {integrity: sha512-Pla9Tr94Is18o97E/mqHKdkR24rPES9atGm3BlXrNzyr5tu6+h++RBbxy7V6IExcfl0MX+v9Gyqz7sPZzFtwMA==}
+    dependencies:
+      '@material/animation': 14.0.0-canary.53b3cad2f.0
+      '@material/base': 14.0.0-canary.53b3cad2f.0
+      '@material/density': 14.0.0-canary.53b3cad2f.0
+      '@material/dom': 14.0.0-canary.53b3cad2f.0
+      '@material/feature-targeting': 14.0.0-canary.53b3cad2f.0
+      '@material/floating-label': 14.0.0-canary.53b3cad2f.0
+      '@material/line-ripple': 14.0.0-canary.53b3cad2f.0
+      '@material/notched-outline': 14.0.0-canary.53b3cad2f.0
+      '@material/ripple': 14.0.0-canary.53b3cad2f.0
+      '@material/rtl': 14.0.0-canary.53b3cad2f.0
+      '@material/shape': 14.0.0-canary.53b3cad2f.0
+      '@material/theme': 14.0.0-canary.53b3cad2f.0
+      '@material/tokens': 14.0.0-canary.53b3cad2f.0
+      '@material/typography': 14.0.0-canary.53b3cad2f.0
+      tslib: 2.4.1
+    dev: false
+
+  /@material/theme/14.0.0-canary.53b3cad2f.0:
+    resolution: {integrity: sha512-S06XAevDCDWMe+GgsEpITMS07imUidzadNaTbJsqssFajBLr53QWVZsG84BpjXKXoYvyEJvb0hX5U0lq6ip9UQ==}
+    dependencies:
+      '@material/feature-targeting': 14.0.0-canary.53b3cad2f.0
+      tslib: 2.4.1
+    dev: false
+
+  /@material/tokens/14.0.0-canary.53b3cad2f.0:
+    resolution: {integrity: sha512-myHFB7vac8zErA3qgkqmV+kpE+i9JEwc/6Yf0MOumDSpylJGw28QikpNC6eAVBK2EmPQTaFn20mqUxyud8dGqw==}
+    dependencies:
+      '@material/elevation': 14.0.0-canary.53b3cad2f.0
+    dev: false
+
+  /@material/typography/14.0.0-canary.53b3cad2f.0:
+    resolution: {integrity: sha512-9J0k2fq7uyHsRzRqJDJLGmg3YzRpfRPtFDVeUH/xBcYoqpZE7wYw5Mb7s/l8eP626EtR7HhXhSPjvRTLA6NIJg==}
+    dependencies:
+      '@material/feature-targeting': 14.0.0-canary.53b3cad2f.0
+      '@material/theme': 14.0.0-canary.53b3cad2f.0
+      tslib: 2.4.1
+    dev: false
+
   /@ngtools/webpack/14.2.9_ivosl2yq7ujfnj7azwycnkshbe:
     resolution: {integrity: sha512-P2zgvsfSpN4BkNzZWnPKUVOzv3y/SUWdnx/nhAG5gsQkLBp0Vf2evwQnbPUKuCrbMpYd1V/5SHb48+0B6FbUtQ==}
     engines: {node: ^14.15.0 || >=16.10.0, npm: ^6.11.0 || ^7.5.6 || >=8.0.0, yarn: '>= 1.13.0'}
@@ -2253,6 +2471,10 @@ packages:
     dependencies:
       '@types/node': 18.11.9
     dev: true
+
+  /@types/trusted-types/2.0.2:
+    resolution: {integrity: sha512-F5DIZ36YVLE+PN+Zwws4kJogq47hNgX3Nx6WyDJ3kcplxyke3XIzB8uK5n/Lpm1HBsbGzd6nmGehL8cPekP+Tg==}
+    dev: false
 
   /@types/ws/8.5.3:
     resolution: {integrity: sha512-6YOoWjruKj1uLf3INHH7D3qTXwFfEsg1kf3c0uDdSBJwfa/llkwIjrAGV7j7mVgGNbzTQ3HiHKKDXl6bJPD97w==}
@@ -4663,7 +4885,7 @@ packages:
     dependencies:
       copy-anything: 2.0.6
       parse-node-version: 1.0.1
-      tslib: 2.4.0
+      tslib: 2.4.1
     optionalDependencies:
       errno: 0.1.8
       graceful-fs: 4.2.10
@@ -4693,6 +4915,27 @@ packages:
   /lines-and-columns/1.2.4:
     resolution: {integrity: sha512-7ylylesZQ/PV29jhEDl3Ufjo6ZX7gCqJr5F7PKrqc93v7fzSymt1BpwEU8nAUXs8qzzvqhbjhK5QZg6Mt/HkBg==}
     dev: true
+
+  /lit-element/3.2.2:
+    resolution: {integrity: sha512-6ZgxBR9KNroqKb6+htkyBwD90XGRiqKDHVrW/Eh0EZ+l+iC+u+v+w3/BA5NGi4nizAVHGYvQBHUDuSmLjPp7NQ==}
+    dependencies:
+      '@lit/reactive-element': 1.4.2
+      lit-html: 2.4.0
+    dev: false
+
+  /lit-html/2.4.0:
+    resolution: {integrity: sha512-G6qXu4JNUpY6aaF2VMfaszhO9hlWw0hOTRFDmuMheg/nDYGB+2RztUSOyrzALAbr8Nh0Y7qjhYkReh3rPnplVg==}
+    dependencies:
+      '@types/trusted-types': 2.0.2
+    dev: false
+
+  /lit/2.4.1:
+    resolution: {integrity: sha512-qohSgLiyN1cFnJG26dIiY03S4F49857A0AHQfnS0zYtnUVnD2MFvx+UT52rtXsIuNFQrnUupX+zyGSATlk1f/A==}
+    dependencies:
+      '@lit/reactive-element': 1.4.2
+      lit-element: 3.2.2
+      lit-html: 2.4.0
+    dev: false
 
   /loader-runner/4.3.0:
     resolution: {integrity: sha512-3R/1M+yS3j5ou80Me59j7F9IMs4PXs3VqRrm0TU3AbKPxlmpoY1TNscJV/oGJXo8qCatFGTfDbY6W6ipGOYXfg==}

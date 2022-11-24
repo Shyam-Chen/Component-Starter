@@ -42,12 +42,12 @@
       />
     </div>
 
-    <div class="text-gray-700">
+    <div class="text-gray-700 ml-2">
       <slot />
     </div>
   </label>
 </div>
 
-<style>
+<style lang="scss">
   @unocss-placeholder;
 </style>

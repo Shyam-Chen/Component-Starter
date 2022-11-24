@@ -1,7 +1,17 @@
 <script lang="ts">
-  import { register, WcHello, WcSwitch } from 'awesome-components';
+  import '@material/mwc-textfield';
+  // import Router from 'svelte-spa-router';
+  import { register, SimpleGreeting, WcHello, WcSwitch } from 'awesome-components';
 
-  register(WcHello, WcSwitch);
+  // import router from '~/plugins/router';
+
+  register(SimpleGreeting, WcHello, WcSwitch);
+
+  let textfield = '';
+
+  const inputTextfield = (event: Event) => {
+    textfield = (event.target as HTMLInputElement).value;
+  };
 
   let text = '';
 
@@ -16,6 +26,11 @@
   };
 </script>
 
+<simple-greeting name="World" />
+
+<mwc-textfield label="Textfield" value={textfield} on:input={inputTextfield} />
+{textfield}
+
 <wc-hello hello-text="Hello Svelte" on:hello-click={helloClick}>
   ({text})
 </wc-hello>
@@ -24,4 +39,4 @@
   Switch in Svelte ({checked})
 </wc-switch>
 
-<wc-switch {checked} disabled on:change={changeWcSwitch}></wc-switch>
+<wc-switch {checked} disabled on:change={changeWcSwitch} />

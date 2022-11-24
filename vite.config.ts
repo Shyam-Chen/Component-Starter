@@ -4,6 +4,7 @@ import { svelte } from '@sveltejs/vite-plugin-svelte';
 import sveltePreprocess from 'svelte-preprocess';
 import unocss from 'unocss/vite';
 import { presetUno } from 'unocss';
+// import dts from 'vite-plugin-dts';
 
 export default defineConfig({
   build: {
@@ -24,5 +25,6 @@ export default defineConfig({
       mode: 'shadow-dom',
       presets: [presetUno()],
     }),
+    // dts(),
   ],
 });

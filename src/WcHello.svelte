@@ -30,6 +30,6 @@
   <slot />
 </button>
 
-<style>
+<style lang="scss">
   @unocss-placeholder;
 </style>

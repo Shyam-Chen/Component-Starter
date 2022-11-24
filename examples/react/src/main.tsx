@@ -1,5 +1,6 @@
 import { render } from 'preact';
+import { RouterProvider } from 'react-router-dom';
 
-import { App } from './App';
+import router from '~/plugins/router';
 
-render(<App />, document.getElementById('root') as HTMLElement);
+render(<RouterProvider router={router} />, document.getElementById('root') as HTMLElement);

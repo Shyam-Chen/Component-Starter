@@ -1,5 +1,16 @@
 export const register = (...cpn: any[]) => null;
 
+/**
+ * @lit
+ */
+
+export { SimpleGreeting } from './simple-greeting';
+export { TextField } from './text-field';
+
+/**
+ * @svelte
+ */
+
 import _WcHello from './WcHello.svelte';
 import _WcSwitch from './WcSwitch.svelte';
 

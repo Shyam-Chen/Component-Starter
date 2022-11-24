@@ -1,7 +1,8 @@
+import '@material/mwc-textfield';
 import { Component } from '@angular/core';
-import { register, WcHello, WcSwitch } from 'awesome-components';
+import { register, SimpleGreeting, WcHello, WcSwitch } from 'awesome-components';
 
-register(WcHello, WcSwitch);
+register(SimpleGreeting, WcHello, WcSwitch);
 
 @Component({
   standalone: true,
@@ -10,8 +11,13 @@ register(WcHello, WcSwitch);
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
+  textfield = '';
   text = '';
   checked = false;
+
+  inputTextfield(event: Event) {
+    this.textfield = (event.target as HTMLInputElement).value;
+  }
 
   helloClick(event: CustomEvent) {
     this.text = event.detail.helloText;

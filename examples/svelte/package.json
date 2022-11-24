@@ -8,7 +8,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "awesome-components": "link:../../"
+    "@material/mwc-textfield": "^0.27.0",
+    "awesome-components": "link:../../",
+    "svelte-spa-router": "^3.3.0"
   },
   "devDependencies": {
     "@sveltejs/vite-plugin-svelte": "^1.1.0",
