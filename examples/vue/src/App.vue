@@ -23,4 +23,6 @@ const flux = reactive({
   <wc-switch :checked="flux.checked" @change="flux.changeWcSwitch">
     Switch in Vue ({{ flux.checked }})
   </wc-switch>
+
+  <wc-switch :checked="flux.checked" disabled @change="flux.changeWcSwitch"></wc-switch>
 </template>

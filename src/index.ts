@@ -1,6 +1,7 @@
 export const register = (...cpn: any[]) => null;
 
 import _WcHello from './WcHello.svelte';
+import _WcSwitch from './WcSwitch.svelte';
 
 const customElements = {
   define: (tagName, CustomElement) => {
@@ -25,4 +26,4 @@ const customElements = {
 };
 
 export const WcHello = customElements.define('wc-hello', _WcHello);
-export { default as WcSwitch } from './WcSwitch.svelte';
+export const WcSwitch = customElements.define('wc-switch', _WcSwitch);

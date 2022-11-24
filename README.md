@@ -1,6 +1,6 @@
 # Component Starter
 
-:carousel_horse: A boilerplate for Web Components to help build microservices.
+:carousel_horse: A boilerplate for Web Components to help build microservices development.
 
 ## Create Web Components
 

@@ -23,3 +23,5 @@
 <wc-switch {checked} on:change={changeWcSwitch}>
   Switch in Svelte ({checked})
 </wc-switch>
+
+<wc-switch {checked} disabled on:change={changeWcSwitch}></wc-switch>

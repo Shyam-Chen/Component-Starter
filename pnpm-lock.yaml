@@ -9,7 +9,6 @@ specifiers:
   lodash: ^4.17.21
   svelte: ^3.53.1
   svelte-check: ^2.9.2
-  svelte-dts: ^0.3.7
   svelte-preprocess: ^4.10.7
   tslib: ^2.4.1
   typescript: ^4.8.4
@@ -28,7 +27,6 @@ devDependencies:
   lit: 2.4.0
   svelte: 3.53.1
   svelte-check: 2.9.2_svelte@3.53.1
-  svelte-dts: 0.3.7
   svelte-preprocess: 4.10.7_f4bsrsgtzvlkrtbz2ig7nipio4
   tslib: 2.4.1
   typescript: 4.8.4
@@ -564,11 +562,6 @@ packages:
 
   /colorette/2.0.19:
     resolution: {integrity: sha512-3tlv/dIP7FWvj3BsbHrGLJ6l/oKh1O3TcgBqMn+yyCagOxc23fyzDS6HypQbgxWbkpDnf52p1LuR4eWDQ/K9WQ==}
-    dev: true
-
-  /commander/7.2.0:
-    resolution: {integrity: sha512-QrWXB+ZQSVPmIWIhtEO9H+gwHaMGYiF5ChvoJ+K9ZGHG/sVsa6yiesAD1GC/x46sET00Xlwo1u49RVVVzvcSkw==}
-    engines: {node: '>= 10'}
     dev: true
 
   /concat-map/0.0.1:
@@ -1352,13 +1345,6 @@ packages:
       picomatch: 2.3.1
     dev: true
 
-  /recursive-readdir/2.2.3:
-    resolution: {integrity: sha512-8HrF5ZsXk5FAH9dgsx3BlUer73nIhuj+9OrQwEbLTPOBzGkL1lsFCR01am+v+0m2Cmbs1nP12hLDl5FA7EszKA==}
-    engines: {node: '>=6.0.0'}
-    dependencies:
-      minimatch: 3.1.2
-    dev: true
-
   /require-directory/2.1.1:
     resolution: {integrity: sha512-fGxEI7+wsG9xrvdjsrlmL22OMTTiHRwAMroiEeMgq8gzoLC/PQr7RsRDSTLUg/bZAZtF+TVIkHc6/4RIKrui+Q==}
     engines: {node: '>=0.10.0'}
@@ -1555,15 +1541,6 @@ packages:
       - sugarss
     dev: true
 
-  /svelte-dts/0.3.7:
-    resolution: {integrity: sha512-gy5jIgL8R9IDBwfqvvzPwamEJufQyieEaS5D9drvtOi8rpWlg7ZuAnJ73ZjJK71o8ik8hIM3zx2XiPlLTDb/tQ==}
-    hasBin: true
-    dependencies:
-      commander: 7.2.0
-      recursive-readdir: 2.2.3
-      tmp: 0.2.1
-    dev: true
-
   /svelte-hmr/0.15.1_svelte@3.53.1:
     resolution: {integrity: sha512-BiKB4RZ8YSwRKCNVdNxK/GfY+r4Kjgp9jCLEy0DuqAKfmQtpL38cQK3afdpjw4sqSs4PLi3jIPJIFp259NkZtA==}
     engines: {node: ^12.20 || ^14.13.1 || >= 16}
@@ -1650,13 +1627,6 @@ packages:
   /tinyspy/1.0.2:
     resolution: {integrity: sha512-bSGlgwLBYf7PnUsQ6WOc6SJ3pGOcd+d8AA6EUnLDDM0kWEstC1JIlSZA3UNliDXhd9ABoS7hiRBDCu+XP/sf1Q==}
     engines: {node: '>=14.0.0'}
-    dev: true
-
-  /tmp/0.2.1:
-    resolution: {integrity: sha512-76SUhtfqR2Ijn+xllcI5P1oyannHNHByD80W1q447gU3mp9G9PSpGdWmjUOHRDPiHYacIk66W7ubDTuPF3BEtQ==}
-    engines: {node: '>=8.17.0'}
-    dependencies:
-      rimraf: 3.0.2
     dev: true
 
   /to-regex-range/5.0.1:

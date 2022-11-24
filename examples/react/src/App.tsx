@@ -22,8 +22,10 @@ export function App() {
       </wc-hello>
 
       <wc-switch checked={checked} onChange={changeWcSwitch}>
-        Switch in React
+        Switch in React ({String(checked)})
       </wc-switch>
+
+      <wc-switch checked={checked} disabled onChange={changeWcSwitch}></wc-switch>
     </>
   );
 }
