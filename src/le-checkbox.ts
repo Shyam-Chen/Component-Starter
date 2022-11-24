@@ -7,7 +7,18 @@ export class LeCheckbox extends LitElement {
     @unocss-placeholder;
   `;
 
-  @property() checked = false;
+  private _checked = false;
+
+  @property({ type: Boolean })
+  set checked(checked: boolean) {
+    const oldValue = this._checked;
+    this._checked = checked;
+    this.requestUpdate('checked', oldValue);
+  }
+
+  get checked() {
+    return this._checked;
+  }
 
   onChange(event: Event) {
     this.checked = (event.target as HTMLInputElement).checked;

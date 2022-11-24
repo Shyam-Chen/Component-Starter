@@ -9,7 +9,18 @@ export class LeTextField extends LitElement {
 
   @property() type = 'text';
 
-  @property() value = '';
+  private _value = '';
+
+  @property({ type: String })
+  set value(value: string) {
+    const oldValue = this._value;
+    this._value = value;
+    this.requestUpdate('value', oldValue);
+  }
+
+  get value() {
+    return this._value;
+  }
 
   onInput(event: Event) {
     this.value = (event.target as HTMLInputElement).value;
