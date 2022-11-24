@@ -2,9 +2,8 @@
 import { MdFilledTextField } from '@material/web/textfield/filled-text-field';
 import { MdOutlinedTextField } from '@material/web/textfield/outlined-text-field';
 import { reactive } from 'vue';
-import { register, WcHello, WcSwitch, SimpleGreeting, TextField } from 'awesome-components';
-
-register(MdFilledTextField, MdOutlinedTextField);
+import { WcHello, WcSwitch, SimpleGreeting } from 'awesome-components';
+import { LeCheckbox, LeTextField, SeCheckbox, SeTextField } from 'awesome-components';
 
 const flux = reactive({
   textfield: '',
@@ -21,23 +20,19 @@ const flux = reactive({
   changeWcSwitch(event: CustomEvent) {
     flux.checked = !event.detail.checked;
   },
+  changeCheckbox(event: Event) {
+    flux.checked = (event.target as HTMLInputElement).checked;
+  },
 });
 </script>
 
 <template>
   <simple-greeting name="World"></simple-greeting>
 
-  <md-filled-text-field
-    label="Textfield"
-    :value="flux.textfield"
-    @input="flux.inputTextfield"
-  ></md-filled-text-field>
-
-  <md-outlined-text-field
-    label="Textfield"
-    :value="flux.textfield"
-    @input="flux.inputTextfield"
-  ></md-outlined-text-field>
+  <md-filled-text-field label="Filled Text Field" :value="flux.textfield" @input="flux.inputTextfield">
+  </md-filled-text-field>
+  <md-outlined-text-field label="Outlined Text Field" :value="flux.textfield" @input="flux.inputTextfield">
+  </md-outlined-text-field>
   {{ flux.textfield }}
 
   <wc-hello hello-text="Hello Vue" @hello-click="flux.helloClick"> ({{ flux.text }}) </wc-hello>
@@ -48,5 +43,15 @@ const flux = reactive({
 
   <wc-switch :checked="flux.checked" disabled @change="flux.changeWcSwitch"></wc-switch>
 
-  <text-field :value="flux.textfield" @input="flux.inputTextfield"></text-field>
+  <le-text-field label="Text Field" :value="flux.textfield" @input="flux.inputTextfield"></le-text-field>
+  <le-text-field label="Text Field" :value="flux.textfield" @input="flux.inputTextfield"></le-text-field>
+
+  <se-text-field label="Text Field" :value="flux.textfield" @input="flux.inputTextfield"></se-text-field>
+  <se-text-field label="Text Field" :value="flux.textfield" @input="flux.inputTextfield"></se-text-field>
+
+  <le-checkbox :checked="flux.checked" @change="flux.changeCheckbox"></le-checkbox>
+  <le-checkbox :checked="flux.checked" @change="flux.changeCheckbox"></le-checkbox>
+
+  <se-checkbox :checked="flux.checked" @change="flux.changeCheckbox"></se-checkbox>
+  <se-checkbox :checked="flux.checked" @change="flux.changeCheckbox"></se-checkbox>
 </template>

@@ -1,8 +1,8 @@
 import { html, css, LitElement } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
 
-@customElement('text-field')
-export class TextField extends LitElement {
+@customElement('le-text-field')
+export class LeTextField extends LitElement {
   static styles = css`
     @unocss-placeholder;
   `;
@@ -13,6 +13,7 @@ export class TextField extends LitElement {
 
   onInput(event: Event) {
     this.value = (event.target as HTMLInputElement).value;
+    this.dispatchEvent(new CustomEvent('input', event));
   }
 
   render() {

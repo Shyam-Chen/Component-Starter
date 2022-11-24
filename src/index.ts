@@ -5,11 +5,15 @@ export const register = (...cpn: any[]) => null;
  */
 
 export { SimpleGreeting } from './simple-greeting';
-export { TextField } from './text-field';
+export { LeCheckbox } from './le-checkbox';
+export { LeTextField } from './le-text-field';
 
 /**
  * @svelte
  */
+
+export { default as SeCheckbox } from './se-checkbox.svelte';
+export { default as SeTextField } from './se-text-field.svelte';
 
 import _WcHello from './WcHello.svelte';
 import _WcSwitch from './WcSwitch.svelte';
