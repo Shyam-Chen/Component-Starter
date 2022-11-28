@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import { RouterLink, RouterView } from 'vue-router';
 import { MdFilledTextField } from '@material/web/textfield/filled-text-field';
 import { MdOutlinedTextField } from '@material/web/textfield/outlined-text-field';
 import { reactive } from 'vue';
@@ -54,4 +55,11 @@ const flux = reactive({
 
   <se-checkbox :checked="flux.checked" @change="flux.changeCheckbox"></se-checkbox>
   <se-checkbox :checked="flux.checked" @change="flux.changeCheckbox"></se-checkbox>
+
+  <div>
+    <RouterLink to="/">Home</RouterLink> /
+    <RouterLink to="/text-field">Text Field</RouterLink>
+  </div>
+
+  <RouterView />
 </template>

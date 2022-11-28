@@ -1,9 +1,9 @@
 <script lang="ts">
   import '@material/mwc-textfield';
-  // import Router from 'svelte-spa-router';
+  import Router, { link } from 'svelte-spa-router';
   import { register, SimpleGreeting, WcHello, WcSwitch } from 'awesome-components';
 
-  // import router from '~/plugins/router';
+  import router from '~/plugins/router';
 
   register(SimpleGreeting, WcHello, WcSwitch);
 
@@ -40,3 +40,10 @@
 </wc-switch>
 
 <wc-switch {checked} disabled on:change={changeWcSwitch} />
+
+<div>
+  <a href="/" use:link>Home</a> /
+  <a href="/text-field" use:link>Text Field</a>
+</div>
+
+<Router routes={router} />

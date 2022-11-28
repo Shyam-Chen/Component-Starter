@@ -1,5 +1,6 @@
 import '@material/mwc-textfield';
 import React, { useState } from 'react';
+import { Link, Outlet } from 'react-router-dom';
 import { register, SimpleGreeting, WcHello, WcSwitch } from 'awesome-components';
 
 register(SimpleGreeting, WcHello, WcSwitch);
@@ -37,6 +38,11 @@ export function App() {
       </wc-switch>
 
       <wc-switch checked={checked} disabled onChange={changeWcSwitch}></wc-switch>
+
+      <Link to="/">Home</Link>
+      <Link to="/text-field">Text Field</Link>
+
+      <Outlet />
     </>
   );
 }
