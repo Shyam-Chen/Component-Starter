@@ -1,5 +1,6 @@
 import '@material/mwc-textfield';
 import { Component } from '@angular/core';
+import { RouterModule } from '@angular/router';
 import { register, SimpleGreeting, WcHello, WcSwitch } from 'awesome-components';
 
 register(SimpleGreeting, WcHello, WcSwitch);
@@ -9,6 +10,7 @@ register(SimpleGreeting, WcHello, WcSwitch);
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
+  imports: [RouterModule],
 })
 export class AppComponent {
   textfield = '';

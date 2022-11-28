@@ -1,3 +1,8 @@
-import { Routes } from '@angular/router';
+import type { Routes } from '@angular/router';
 
-export default [] as Routes;
+export default [
+  {
+    path: 'text-field',
+    loadComponent: () => import('../modules/text-field/text-field.component').then((mod) => mod.TextFieldComponent),
+  },
+] as Routes;
