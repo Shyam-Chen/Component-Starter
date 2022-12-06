@@ -11,13 +11,13 @@ export class LeTextField extends LitElement {
 
   private _value = '';
 
-  @property({ type: String })
-  set value(value: string) {
-    const oldValue = this._value;
-    this._value = value;
-    this.requestUpdate('value', oldValue);
+  set value(val) {
+    const oldVal = this._value;
+    this._value = val;
+    this.requestUpdate('value', oldVal);
   }
 
+  @property({ type: String })
   get value() {
     return this._value;
   }

@@ -9,13 +9,13 @@ export class LeCheckbox extends LitElement {
 
   private _checked = false;
 
-  @property({ type: Boolean })
-  set checked(checked: boolean) {
-    const oldValue = this._checked;
-    this._checked = checked;
-    this.requestUpdate('checked', oldValue);
+  set checked(val) {
+    const oldVal = this._checked;
+    this._checked = val;
+    this.requestUpdate('checked', oldVal);
   }
 
+  @property({ type: Boolean })
   get checked() {
     return this._checked;
   }
